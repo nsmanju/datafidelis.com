@@ -1,168 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Data Fidelis Services — Hong Kong | Quant Infra & HKEX OMD-C</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DATA FIDELIS SERVICES — HKEX, Claims, FIX, HFT</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-*{box-sizing:border-box}html{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
-body{margin:0;background:#fff;color:#1e293b;line-height:1.6}
-.wrap{max-width:1120px;margin:0 auto;padding:0 32px}
-@media(max-width:768px){.wrap{padding:0 20px}}
-.badge{display:inline-flex;align-items:center;gap:8px;border:1px solid #e2e8f0;border-radius:999px;padding:6px 14px;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
-.badge .dot{width:6px;height:6px;border-radius:50%;background:#16a34a}
-.card{border:1px solid #e2e8f0;border-radius:12px;background:#fff;box-shadow:0 1px 2px rgba(15,23,42,.04),0 4px 12px rgba(15,23,42,.04)}
-.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
-.small{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#94a3b8;font-weight:600}
-.kv{display:flex;gap:12px;font-size:13px;padding:7px 0;border-bottom:1px dashed #f1f5f9}
-.kv b{width:140px;flex-shrink:0;color:#0f172a;font-weight:600}
-.gh{display:inline-flex;align-items:center;gap:6px;border:1px solid #e2e8f0;background:#fff;padding:6px 12px;border-radius:8px;font-size:11px;font-weight:500;text-decoration:none;color:#0f172a}
-.gh:hover{border-color:#0f172a;background:#0f172a;color:#fff}
+:root{--bg:#f8fafc;--card:#fff;--border:#e2e8f0;--green:#eaf6ee;--green-b:#c8e6d0;--text:#0f172a;--muted:#475569;--accent:#15803d;--accent-bg:#dcfce7}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+.header{max-width:1220px;margin:0 auto;padding:54px 24px 0}
+.header h1{font-size:30px;font-weight:900;letter-spacing:-0.02em;text-transform:uppercase}
+.sub{color:#64748b;font-size:12px;letter-spacing:.06em;text-transform:uppercase;margin-top:6px;font-weight:600}
+.intro-wrap{max-width:1220px;margin:28px auto 0;padding:0 24px;display:grid;grid-template-columns:1fr 380px;gap:28px;border-top:1px solid var(--border);padding-top:28px}
+@media(max-width:960px){.intro-wrap{grid-template-columns:1fr}}
+.badge{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#334155;margin-bottom:10px}
+.lead{color:#334155;font-size:14px;line-height:1.7}
+.bullets{margin-top:18px;list-style:none}
+.bullets li{position:relative;padding-left:14px;margin-bottom:14px;font-size:13.5px;color:#334155}
+.bullets li::before{content:"•";position:absolute;left:0;color:var(--accent);font-weight:900}
+.bullets li b{color:var(--text)}
+.focus{border:1px solid var(--border);border-radius:14px;background:var(--card);padding:20px 20px 18px;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.k{font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#64748b;margin-bottom:8px}
+.focus h3{font-size:13px;font-weight:800;line-height:1.5}
+.desc{margin-top:10px;font-size:12px;color:#64748b;line-height:1.6}
+.metric{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px;border-top:1px solid var(--border);padding-top:16px}
+.big{font-size:20px;font-weight:900}
+.small{font-size:11px;color:#64748b;margin-top:2px}
+.small.g{color:var(--accent);font-weight:700}
+.selected{max-width:1220px;margin:38px auto 0;padding:0 24px;text-align:center;border-top:1px solid var(--border);padding-top:22px}
+.t{font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:#0f172a}
+.t2{font-size:11px;font-weight:800;color:var(--accent);margin-top:6px}
+.wrap{max-width:1220px;margin:18px auto;padding:0 20px}
+.repo{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:18px}
+.repo-head{background:var(--green);border-bottom:1px solid var(--green-b);padding:11px 16px;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.tt{font-size:11.5px;font-weight:800;letter-spacing:.02em;text-transform:uppercase;color:#14532d}
+.tg{font-size:10px;font-weight:800;color:var(--accent);background:#fff;border:1px solid var(--green-b);padding:5px 10px;border-radius:999px}
+.body{display:grid;grid-template-columns:1fr 350px}
+@media(max-width:920px){.body{grid-template-columns:1fr}}
+.left{padding:18px 20px}
+.left h2{font-size:15.5px;font-weight:800;margin-bottom:6px}
+.left p{color:#475569;font-size:13px;line-height:1.6}
+.perf{margin-top:12px;border:1px solid var(--border);border-radius:10px;overflow:hidden}
+.perf-h{display:flex;justify-content:space-between;padding:6px 10px;background:#f8fafc;border-bottom:1px solid var(--border);font-size:9.5px;font-weight:800;color:#64748b;letter-spacing:.05em;text-transform:uppercase}
+.grid6{display:grid;grid-template-columns:repeat(6,1fr)}
+.grid6 div{padding:8px 10px;border-right:1px solid var(--border)}
+.grid6 div:last-child{border-right:0}
+.kk{font-size:9px;color:#94a3b8;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.vv{font-size:12px;font-weight:800;margin-top:1px}
+.vv.g{color:var(--accent)}
+.right{background:#fbfdff;border-left:1px solid var(--border);padding:18px}
+.lb{font-size:9.5px;font-weight:900;letter-spacing:.08em;color:var(--accent);text-transform:uppercase;margin-bottom:8px}
+.linkb{background:#fff;border:1px solid var(--border);border-radius:8px;padding:10px 11px;font-family:ui-monospace,monospace;font-size:11px;word-break:break-all}
+.meta{margin-top:10px;font-size:10.5px;color:#94a3b8;line-height:1.6}
+.btn{display:inline-block;margin-top:10px;padding:6px 11px;background:#0f172a;color:#fff;border-radius:7px;text-decoration:none;font-size:11px;font-weight:700}
+.btn.g{background:var(--accent)}
+/* Bottom consultant section - RESTORED from screenshot */
+.bottom{max-width:1220px;margin:28px auto 0;padding:22px 24px;background:var(--card);border:1px solid var(--border);border-radius:14px;display:grid;grid-template-columns:1fr 1.1fr;gap:28px}
+@media(max-width:900px){.bottom{grid-template-columns:1fr}}
+.bottom .k{margin-bottom:10px}
+.bottom h3{font-size:15px;font-weight:800;margin-bottom:14px}
+.row{display:grid;grid-template-columns:100px 1fr;gap:8px;margin-bottom:10px;font-size:12.5px}
+.row .l{font-weight:800;color:#0f172a;font-size:11px;letter-spacing:.04em;text-transform:uppercase}
+.row .v2{color:#475569}
+.bottom .bul2{list-style:none;margin-top:8px}
+.bottom .bul2 li{position:relative;padding-left:12px;margin-bottom:8px;font-size:12.5px;color:#475569}
+.bottom .bul2 li::before{content:"•";position:absolute;left:0;color:var(--accent);font-weight:900}
+.footer2{max-width:1220px;margin:18px auto 0;padding:12px 24px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;border-top:1px solid var(--border);font-size:11px;color:#64748b}
+.footer2 a{color:#64748b;text-decoration:underline}
+.pill{border:1px solid var(--green-b);background:var(--accent-bg);color:var(--accent);padding:5px 11px;border-radius:999px;font-size:10.5px;font-weight:800}
 </style>
 </head>
 <body>
+
+<div class="header">
+  <h1>DATA FIDELIS SERVICES</h1>
+  <div class="sub">HONG KONG (SAR) • C++17 / C++20 / C++23 HIGH-PERFORMANCE SYSTEMS FOR HFT & INSURANCE</div>
+</div>
+
+<div class="intro-wrap">
+  <div>
+    <div class="badge">BUSINESS ACTIVITIES (SOFTWARE SERVICES ONLY)</div>
+    <p class="lead">We build systems that survive market open, not just compile. Quant infrastructure — hardened for Trading Desks and HK insurers. Direct principal engagement from design to production cutover, with MSA-ready delivery, audit logs, runbooks, and on-prem / VPC deployment options.</p>
+    <ul class="bullets">
+      <li><b>Low-latency trading infrastructure consulting</b> — C++17 / C++20 / C++23, Python, Linux 6.8 low-latency, kernel bypass (AF_XDP, DPDK-ready), SPSC / MPSC lock-free queues, cache-line alignment, NUMA-aware allocation.</li>
+      <li><b>Market connectivity</b> — Feed handlers (HKEX OMD-C / OMD-D, multicast 239.1.1.1:5000), order routers, FIX 4.2/4.4/5.0SP2 protocol, drop-copy recon, sequence gap detection, resilient failover.</li>
+      <li><b>Exchange integration, performance optimization, latency measurement</b> — p50/p90/p99/p99.9 instrumentation, CPU pinning, isolated cores, hardware timestamps, flame graphs, Latitude 7480 validated.</li>
+      <li><b>Custom software development for capital markets</b> — Greenfield fabric, claim integrity pipelines (SFC Type 9 MSA ready), volatility surface & gamma scalping engines, FPGA-ready hooks.</li>
+    </ul>
+  </div>
+  <div class="focus">
+    <div class="k">PRODUCTION FOCUS</div>
+    <h3>C++17, C++20 and beyond — High-Performance Systems for HFT & Insurance</h3>
+    <div class="desc">Modern C++ from C++17 to C++20 / C++23: concepts, coroutines-ready, constexpr, lock-free, PMR allocators, zero-deps.</div>
+    <div class="k" style="margin-top:18px;">FEATURED METRIC</div>
+    <div class="metric">
+      <div><div class="big">0.40µs</div><div class="small g">p99 HKEX OMD-C</div></div>
+      <div><div class="big">2.04M/s</div><div class="small">ticks/sec • C++20</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="selected">
+  <div class="t">SELECTED SYSTEMS — ALL PUBLIC GITHUB</div>
+  <div class="t2">• 4 PUBLIC repos • MIT • Open Source • v24 complete</div>
+</div>
+
 <div class="wrap">
 
-<header style="padding:48px 0 20px;border-bottom:1px solid #f1f5f9">
-<div>
-<h1 style="margin:0;font-size:28px;font-weight:700;letter-spacing:-.02em;color:#0f172a;line-height:1.1">DATA FIDELIS SERVICES</h1>
-<div style="margin-top:4px;font-size:13px;color:#64748b;letter-spacing:.08em">HONG KONG (SAR) • C++17 / C++20 / C++23 HIGH-PERFORMANCE SYSTEMS FOR HFT & INSURANCE</div>
-</div>
-</header>
-
-<!-- BUSINESS ACTIVITIES TOP -->
-<section style="padding:28px 0 32px;display:grid;grid-template-columns:1.2fr .8fr;gap:32px">
-<div>
-<div class="small" style="color:#0f172a;margin-bottom:12px">Business Activities (Software Services Only)</div>
-<p style="margin:0;font-size:14px;color:#334155;line-height:1.7;font-weight:500">We build systems that survive market open, not just compile. Quant infrastructure — hardened for Trading Desks and HK insurers. Direct principal engagement from design to production cutover, with MSA-ready delivery, audit logs, runbooks, and on-prem / VPC deployment options.</p>
-<ul style="margin:18px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:11px">
-<li style="display:flex;gap:10px;font-size:13.5px;color:#334155"><span style="color:#16a34a;margin-top:2px">•</span><span><b style="color:#0f172a">Low-latency trading infrastructure consulting</b> — C++17 / C++20 / C++23, Python, Linux 6.8 low-latency, kernel bypass (AF_XDP, DPDK-ready), SPSC / MPSC lock-free queues, cache-line alignment, NUMA-aware allocation.</span></li>
-<li style="display:flex;gap:10px;font-size:13.5px;color:#334155"><span style="color:#16a34a;margin-top:2px">•</span><span><b style="color:#0f172a">Market connectivity</b> — Feed handlers (HKEX OMD-C / OMD-D, multicast 239.1.1.1:5000), order routers, FIX 4.2/4.4/5.0SP2 protocol, drop-copy recon, sequence gap detection, resilient failover.</span></li>
-<li style="display:flex;gap:10px;font-size:13.5px;color:#334155"><span style="color:#16a34a;margin-top:2px">•</span><span><b style="color:#0f172a">Exchange integration, performance optimization, latency measurement</b> — p50/p90/p99/p99.9 instrumentation, CPU pinning, isolated cores, hardware timestamps, flame graphs, Latitude 7480 validated.</span></li>
-<li style="display:flex;gap:10px;font-size:13.5px;color:#334155"><span style="color:#16a34a;margin-top:2px">•</span><span><b style="color:#0f172a">Custom software development for capital markets</b> — Greenfield fabric, claim integrity pipelines (SFC Type 9 MSA ready), volatility surface & gamma scalping engines, FPGA-ready hooks.</span></li>
-</ul>
-</div>
-<div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:20px 22px;align-self:start">
-<div class="small" style="color:#0f172a;margin-bottom:10px">Production Focus</div>
-<div style="font-size:13px;font-weight:600;color:#0f172a;line-height:1.5">C++17, C++20 and beyond — High-Performance Systems for HFT & Insurance</div>
-<div style="margin-top:8px;font-size:12px;color:#64748b;line-height:1.6">Modern C++ from C++17 to C++20 / C++23: concepts, coroutines-ready, constexpr, lock-free, PMR allocators, zero-deps.</div>
-<div style="margin-top:16px">
-<div class="small">Featured Metric</div>
-<div style="display:flex;gap:16px;margin-top:8px">
-<div><div class="mono" style="font-size:18px;font-weight:700;color:#0f172a">0.40µs</div><div style="font-size:11px;color:#16a34a;font-weight:600">p99 HKEX OMD-C</div></div>
-<div><div class="mono" style="font-size:18px;font-weight:700;color:#0f172a">2.04M/s</div><div style="font-size:11px;color:#64748b">ticks/sec • C++20</div></div>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- PROJECTS - CENTERED HEADER -->
-<section style="padding-bottom:36px">
-<div style="text-align:center;margin-bottom:24px">
-<h3 style="margin:0;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#0f172a;font-weight:700">Selected Systems — All Public GitHub</h3>
-<div style="margin-top:6px;font-size:12px;color:#16a34a;font-weight:600">● 3 PUBLIC repos • MIT • Open Source</div>
+<!-- 01 HKEX -->
+<div class="repo">
+  <div class="repo-head"><div class="tt">01 • hkex-omdc-fabric.cpp — HKEX OMD-C Market Data Fabric (NEW) • C++20 / C++23 • TOP</div><div class="tg">PUBLIC • p99 0.40us • 2.04M ticks/sec • C++20 • PROD</div></div>
+  <div class="body">
+    <div class="left"><h2>HKEX OMD-C Low-Latency Fabric — Greenfield, Open Source</h2><p>Production-grade UDP multicast fabric for HKEX OMD-C 239.1.1.1:5000. Built with C++20 concepts, SPSC lock-free ring, AF_XDP socket, cache-line padding. Open source for reviewable, extensible desk-specific alphas — validates at p99 0.40us on commodity Latitude 7480, 10× faster than typical 5us HFT target. MSA-ready with audit logs, runbooks, deterministic replay, MIT licensed.</p>
+      <div class="perf"><div class="perf-h"><span>PERFORMANCE — LATITUDE 7480, GNU 13.3.0, 1M TICKS, C++20 -O3 -FLTO</span><span>bench_omdc_fabric</span></div><div class="grid6"><div><div class="kk">P50</div><div class="vv">0.17us</div></div><div><div class="kk">P90</div><div class="vv">0.20us</div></div><div><div class="kk">P99</div><div class="vv g">0.40us</div></div><div><div class="kk">P99.9</div><div class="vv">0.91us</div></div><div><div class="kk">MAX</div><div class="vv">51.62us</div></div><div><div class="kk">THROUGHPUT</div><div class="vv">2038k/s</div></div></div></div>
+    </div>
+    <div class="right"><div class="lb">GITHUB — PUBLIC • MIT • C++20/23</div><div class="linkb">github.com/nsmanju/hkex-omdc-fabric</div><div class="meta">Build: cmake -O3 -flto -march=native<br>Stack: C++20 • SPSC • AF_XDP • cache-aligned • PMR<br>License: MIT • Public</div></div>
+  </div>
 </div>
 
-<!-- 1. HKEX OMDC AT TOP - PUBLIC -->
-<div class="card" style="border:1.5px solid #bbf7d0;overflow:hidden;margin-bottom:20px">
-<div style="display:flex;justify-content:space-between;align-items:center;padding:12px 20px;background:#f0fdf4;border-bottom:1px solid #bbf7d0;flex-wrap:wrap;gap:8px"><div style="font-size:12px;font-weight:700;color:#0f172a">01 • hkex-omdc-fabric.cpp — HKEX OMD-C Market Data Fabric (NEW) • C++20 / C++23 • TOP</div><span style="font-size:11px;background:#fff;border:1px solid #bbf7d0;color:#15803d;padding:4px 10px;border-radius:999px;font-weight:600" class="mono">PUBLIC • p99 0.40us • 2.04M ticks/sec • C++20 • PROD</span></div>
-<div style="display:grid;grid-template-columns:1.25fr .75fr">
-<div style="padding:22px 26px">
-<h4 style="margin:0;font-size:16px;font-weight:700;color:#0f172a">HKEX OMD-C Low-Latency Fabric — Greenfield, Open Source</h4>
-<p style="font-size:13px;color:#475569;margin-top:8px;line-height:1.65">Production-grade UDP multicast fabric for HKEX OMD-C 239.1.1.1:5000. Built with C++20 concepts, SPSC lock-free ring, AF_XDP socket, cache-line padding. Open source for reviewable, extensible desk-specific alphas — validates at p99 0.40µs on commodity Latitude 7480, 10× faster than typical 5µs HFT target. MSA-ready with audit logs, runbooks, deterministic replay, MIT licensed.</p>
-<div style="margin-top:18px;border:1px solid #e2e8f0;border-radius:10px;overflow:hidden;background:#f8fafc">
-<div style="display:flex;justify-content:space-between;padding:8px 14px;background:#fff;border-bottom:1px solid #e2e8f0"><span class="small" style="color:#475569">Performance — Latitude 7480, GNU 13.3.0, 1M ticks, C++20 -O3 -flto</span><span class="mono" style="font-size:10px;color:#94a3b8">bench_omdc_fabric</span></div>
-<div style="display:grid;grid-template-columns:repeat(6,1fr);font-size:12px">
-<div style="padding:10px 12px;border-right:1px solid #e2e8f0"><div class="small">p50</div><div class="mono" style="font-weight:700;margin-top:2px">0.17us</div></div>
-<div style="padding:10px 12px;border-right:1px solid #e2e8f0"><div class="small">p90</div><div class="mono" style="font-weight:700;margin-top:2px">0.20us</div></div>
-<div style="padding:10px 12px;border-right:1px solid #e2e8f0;background:#f0fdf4"><div class="small">p99</div><div class="mono" style="font-weight:700;color:#15803d;margin-top:2px">0.40us</div></div>
-<div style="padding:10px 12px;border-right:1px solid #e2e8f0"><div class="small">p99.9</div><div class="mono" style="font-weight:700;margin-top:2px">0.91us</div></div>
-<div style="padding:10px 12px;border-right:1px solid #e2e8f0"><div class="small">max</div><div class="mono" style="font-weight:700;margin-top:2px">51.62us</div></div>
-<div style="padding:10px 12px"><div class="small">throughput</div><div class="mono" style="font-weight:700;margin-top:2px">2038k/s</div></div>
-</div>
-</div>
-</div>
-<div style="padding:22px;background:#fcfdfc;border-left:1px solid #e2e8f0;display:flex;flex-direction:column;justify-content:center;gap:12px">
-<div class="small" style="color:#15803d">GitHub — PUBLIC • MIT • C++20/23</div>
-<a href="https://github.com/nsmanju/hkex-omdc-fabric" target="_blank" class="gh mono" style="font-size:12px;padding:10px 14px">github.com/nsmanju/hkex-omdc-fabric</a>
-<p style="font-size:11px;color:#94a3b8;margin:0;line-height:1.5">Build: cmake -O3 -flto -march=native<br/>Stack: C++20 • SPSC • AF_XDP • cache-aligned • PMR<br/>License: MIT • Public</p>
-</div>
-</div>
+<!-- 02 Claims -->
+<div class="repo">
+  <div class="repo-head"><div class="tt">02 • hk_claimsentry.cpp — Insurance Claims Integrity • C++17 / C++20 • PUBLIC</div><div class="tg">PUBLIC • 500K/sec • ML • PROD • MIT</div></div>
+  <div class="body">
+    <div class="left"><h2>HK-ClaimSentry 500K/sec — Real-time claims fraud & duplicate detection</h2><p>Regex + embeddings hybrid pipeline with ONNX inference, RocksDB dedup store, Kafka streaming, and SFC Type 9 MSA audit trail. p99 &lt; 8ms at 500K claims/sec. Designed for HK insurers requiring explainable fraud rules + ML hybrid with deterministic replay, runbooks, and on-prem/VPC deploy. Open source, MIT, production-hardened for market open survival.</p></div>
+    <div class="right"><div class="lb">GITHUB — PUBLIC • MIT • OPEN SOURCE</div><div class="linkb">github.com/nsmanju/hk-claimsentry</div><div class="meta">SFC Type 9 MSA audit ready<br>500K claims/sec • p99 &lt;8ms • PUBLIC</div></div>
+  </div>
 </div>
 
-<!-- 2. CLAIM SENTRY - PUBLIC -->
-<div class="card" style="overflow:hidden;margin-bottom:20px">
-<div style="display:flex;justify-content:space-between;align-items:center;padding:12px 20px;background:#f0fdf4;border-bottom:1px solid #bbf7d0;flex-wrap:wrap;gap:8px"><div style="font-size:12px;font-weight:600;color:#0f172a">02 • hk_claimsentry.cpp — Insurance Claims Integrity • C++17 / C++20 • PUBLIC</div><span style="font-size:11px;border:1px solid #bbf7d0;background:#fff;color:#15803d;padding:4px 10px;border-radius:999px;font-weight:600" class="mono">PUBLIC • 500K/sec • ML • PROD • MIT</span></div>
-<div style="display:grid;grid-template-columns:1.25fr .75fr">
-<div style="padding:22px 26px">
-<h4 style="margin:0;font-size:15px;font-weight:700;color:#0f172a">HK-ClaimSentry 500K/sec — Real-time claims fraud & duplicate detection</h4>
-<p style="font-size:13px;color:#475569;margin-top:8px;line-height:1.65">Regex + embeddings hybrid pipeline with ONNX inference, RocksDB dedup store, Kafka streaming, and SFC Type 9 MSA audit trail. p99 &lt; 8ms at 500K claims/sec. Designed for HK insurers requiring explainable fraud rules + ML hybrid with deterministic replay, runbooks, and on-prem/VPC deploy. Open source, MIT, production-hardened for market open survival.</p>
-<div style="margin-top:12px;font-size:11px;color:#64748b"><span style="color:#0f172a;font-weight:600">stack:</span> C++17 / C++20 / C++23 • ONNX • RocksDB • Kafka • Linux 6.8 low-latency • lock-free • audit trail • MIT</div>
-</div>
-<div style="padding:22px;background:#fcfdfc;border-left:1px solid #e2e8f0;display:flex;flex-direction:column;justify-content:center;gap:12px">
-<div class="small" style="color:#15803d">GitHub — PUBLIC • MIT • Open Source</div>
-<a href="https://github.com/nsmanju/hk-claimsentry" target="_blank" class="gh mono" style="font-size:12px;padding:10px 14px">github.com/nsmanju/hk-claimsentry</a>
-<p style="font-size:11px;color:#94a3b8;margin:0;line-height:1.5">SFC Type 9 MSA audit ready<br/>500K claims/sec • p99 &lt;8ms • PUBLIC</p>
-</div>
-</div>
+<!-- 03 FIX - INSERTED -->
+<div class="repo" style="border-color:#16a34a;border-width:1.5px;">
+  <div class="repo-head" style="background:#dcfce7;border-bottom-color:#86efac;"><div class="tt" style="color:#14532d;">03 • fix_engine_equities.cpp — FIX 4.4 Equities Low-Latency Engine (NEW) • C++20 • PUBLIC • v4</div><div class="tg" style="border-color:#86efac;color:#15803d;">PUBLIC • p99 &lt;50us • 1.5B msg/sec • C++20 • MIT</div></div>
+  <div class="body">
+    <div class="left"><h2>FIX 4.4 Equities — QuickFIX p99 Fix, Zero-Copy, Ubuntu 24.04 CLI</h2><p><b>Problem:</b> QuickFIX/J is tool allocating std::string per field → 200-500us p99 breaks sub-2ms SLO for AAPL/MSFT/HSBA.HK.<br><b>Solution:</b> C++20 zero-copy — buffer IS <code>FixBuilder.build()</code> = <code>recv(fd,buf)</code> wire buffer. <code>FieldView {tag, string_view}</code> slices original buffer, <code>fields_[128]</code> stack, linear scan '=' & SOH 0x01, auto 9= & 10=. Latitude 7480 validated, pedantic clean, e6384a7.</p>
+      <div class="perf"><div class="perf-h"><span>PERFORMANCE — LATITUDE 7480, 1M PARSES, C++20 -O3 -march=native -Wpedantic</span><span>./fix_demo</span></div><div class="grid6"><div><div class="kk">P50</div><div class="vv">~5.2us</div></div><div><div class="kk">P90</div><div class="vv">~8.1us</div></div><div><div class="kk">P99</div><div class="vv g">&lt;50us</div></div><div><div class="kk">CYCLES</div><div class="vv g">12632</div></div><div><div class="kk">BENCH</div><div class="vv">665us/1M</div></div><div><div class="kk">THROUGHPUT</div><div class="vv g">1.5B/s</div></div></div></div>
+    </div>
+    <div class="right" style="background:#f0fdf4;"><div class="lb">GITHUB — PUBLIC • MIT • C++20 • NEW</div><div class="linkb">github.com/nsmanju/fix-engine-equities</div><div class="meta">Build: make -O3 -march=native -Wpedantic<br>Commit e6384a7 v4 final clean • equities only • no crypto<br>Next: fix-engine-equities-prod epoll session recovery</div><a class="btn g" href="https://github.com/nsmanju/fix-engine-equities">Open Repo — v4</a></div>
+  </div>
 </div>
 
-<!-- 3. STRADDLE - PUBLIC -->
-<div class="card" style="overflow:hidden;margin-bottom:8px">
-<div style="display:flex;justify-content:space-between;align-items:center;padding:12px 20px;background:#f0fdf4;border-bottom:1px solid #bbf7d0;flex-wrap:wrap;gap:8px"><div style="font-size:12px;font-weight:600;color:#0f172a">03 • hft_straddle.cpp — Straddle Mispricing Engine • C++17 / C++20 • PUBLIC</div><span style="font-size:11px;border:1px solid #bbf7d0;background:#fff;color:#15803d;padding:4px 10px;border-radius:999px;font-weight:600" class="mono">PUBLIC • 1.2M ticks/sec • HFT • MIT • FPGA-ready</span></div>
-<div style="display:grid;grid-template-columns:1.25fr .75fr">
-<div style="padding:22px 26px">
-<h4 style="margin:0;font-size:15px;font-weight:700;color:#0f172a">HFT Straddle — Volatility surface & gamma scalping</h4>
-<p style="font-size:13px;color:#475569;margin-top:8px;line-height:1.65">Sub-ms order book reconstruction, IV surface arbitrage, real-time gamma calculation with lock-free queues and kernel bypass. &lt; 1.2ms p99 tick-to-signal. Built for prop desks & family offices running volatility arbitrage with FPGA-ready hooks, zero-deps deploy, and deterministic replay. Open source, MIT, C++17 to C++20/23, cache-aware, NUMA-aware.</p>
-<div style="margin-top:12px;font-size:11px;color:#64748b"><span style="color:#0f172a;font-weight:600">stack:</span> C++17 / C++20 / C++23 • FPGA-ready • lock-free queues • kernel bypass • IV surface • gamma scalping • MIT • PUBLIC</div>
-</div>
-<div style="padding:22px;background:#fcfdfc;border-left:1px solid #e2e8f0;display:flex;flex-direction:column;justify-content:center;gap:12px">
-<div class="small" style="color:#15803d">GitHub — PUBLIC • MIT • Open Source</div>
-<a href="https://github.com/nsmanju/hft-straddle-engine" target="_blank" class="gh mono" style="font-size:12px;padding:10px 14px">github.com/nsmanju/hft-straddle-engine</a>
-<p style="font-size:11px;color:#94a3b8;margin:0;line-height:1.5">Prop desks & family offices<br/>Sub-ms recon • &lt;1.2ms p99 • PUBLIC</p>
-</div>
-</div>
+<!-- 04 HFT - MOVED LAST -->
+<div class="repo">
+  <div class="repo-head"><div class="tt">04 • hft_straddle.cpp — Straddle Mispricing Engine • C++17 / C++20 • PUBLIC</div><div class="tg">PUBLIC • 1.2M ticks/sec • HFT • MIT • FPGA-ready</div></div>
+  <div class="body">
+    <div class="left"><h2>HFT Straddle — Volatility surface & gamma scalping</h2><p>Sub-ms order book reconstruction, IV surface arbitrage, real-time gamma calculation with lock-free queues and kernel bypass. &lt; 1.2ms p99 tick-to-signal. Built for prop desks & family offices running volatility arbitrage with FPGA-ready hooks, zero-deps deploy, and deterministic replay. Open source, MIT, C++17 to C++20/23, cache-aware, NUMA-aware.</p><p style="margin-top:8px;font-size:11px;color:#64748b"><b>stack:</b> C++17 / C++20 / C++23 • FPGA-ready • lock-free queues • kernel bypass • IV surface • gamma scalping • MIT • PUBLIC</p></div>
+    <div class="right"><div class="lb">GITHUB — PUBLIC • MIT • OPEN SOURCE</div><div class="linkb">github.com/nsmanju/hft-straddle-engine</div><div class="meta">Prop desks & family offices<br>Sub-ms recon • &lt;1.2ms p99 • PUBLIC</div></div>
+  </div>
 </div>
 
-</section>
+</div>
 
-<!-- BOTTOM: CHIEF + WHY -->
-<section style="padding:8px 0 36px">
-<div class="card" style="background:#f8fafc;padding:24px 28px;display:grid;grid-template-columns:1fr 1fr;gap:32px">
-<div>
-<div class="small" style="color:#0f172a;margin-bottom:10px">Chief Consultant</div>
-<div style="font-size:16px;font-weight:700;color:#0f172a">MANJUNATH, Nadkalpur Shivabasavanna</div>
-<div style="margin-top:14px">
-<div class="kv"><b>ORG</b><span>Data Fidelis Services</span></div>
-<div class="kv"><b>LOC</b><span>Hong Kong (SAR)</span></div>
-<div class="kv"><b>EMAIL</b><a href="mailto:billing@datafidelis.com" style="color:#0f172a;font-weight:500;text-decoration:none">billing@datafidelis.com</a></div>
-<div class="kv" style="border-bottom:none"><b>PHONE</b><span>+852 5783 0107, WhatsApp</span></div>
+<!-- BOTTOM - RESTORED FROM SCREENSHOT - WAS LOST IN V23 -->
+<div class="bottom">
+  <div>
+    <div class="k">CHIEF CONSULTANT</div>
+    <h3>MANJUNATH, Nadkalpur Shivabasavanna</h3>
+    <div class="row"><div class="l">ORG</div><div class="v2">Data Fidelis Services</div></div>
+    <div class="row"><div class="l">LOC</div><div class="v2">Hong Kong (SAR)</div></div>
+    <div class="row"><div class="l">LinkedIn</div><div class="v2"><a href="https://linkedin.com/in/nsmanju" style="color:#0a66c2;text-decoration:none;font-weight:700;">linkedin.com/in/nsmanju</a></div></div>
+    <div class="row"><div class="l">EMAIL</div><div class="v2">billing@datafidelis.com</div></div>
+    <div class="row"><div class="l">PHONE</div><div class="v2">+852 5783 0107, WhatsApp</div></div>
+    <p style="margin-top:16px;font-size:12px;color:#64748b;line-height:1.6;">20y+ market systems, trading infra, HKEX connectivity, SFC MSA, low-latency C++17/C++20/C++23. Direct principal — no bench, no handoff. All repos PUBLIC, MIT, open source.</p>
+  </div>
+  <div>
+    <div class="k">WHY DATA FIDELIS</div>
+    <p style="font-size:13px;color:#334155;font-weight:500;line-height:1.6;">We build systems that survive market open, not just compile. Quant infra — hardened for Trading Desks and HK insurers. All public, reviewable.</p>
+    <ul class="bul2">
+      <li>MSA-ready contracts • Audit logs • Runbooks • On-prem / VPC deploy</li>
+      <li>Hong Kong • C++17 / C++20 / C++23 / Linux • Low-latency • Zero-deps • Static HTML • PUBLIC MIT</li>
+      <li>Direct principal: MANJUNATH Nadkalpur — 20y+ market systems, all repos PUBLIC</li>
+    </ul>
+    <div style="margin-top:18px;border-top:1px solid var(--border);padding-top:14px;">
+      <div class="k">FOCUS</div>
+      <div style="font-size:12.5px;font-weight:800;">C++17, C++20 and beyond — High-Performance Systems for HFT & Insurance — All PUBLIC</div>
+    </div>
+  </div>
 </div>
-<div style="margin-top:14px;font-size:12px;color:#475569;line-height:1.6">20y+ market systems, trading infra, HKEX connectivity, SFC MSA, low-latency C++17/C++20/C++23. Direct principal — no bench, no handoff. All repos PUBLIC, MIT, open source.</div>
-</div>
-<div>
-<div class="small" style="color:#0f172a;margin-bottom:10px">Why Data Fidelis</div>
-<p style="margin:0;font-size:13px;color:#334155;line-height:1.6;font-weight:500">We build systems that survive market open, not just compile. Quant infra — hardened for Trading Desks and HK insurers. All public, reviewable.</p>
-<ul style="margin:12px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px">
-<li style="display:flex;gap:8px;font-size:12.5px;color:#475569"><span style="color:#16a34a">•</span> MSA-ready contracts • Audit logs • Runbooks • On-prem / VPC deploy</li>
-<li style="display:flex;gap:8px;font-size:12.5px;color:#475569"><span style="color:#16a34a">•</span> Hong Kong • C++17 / C++20 / C++23 / Linux • Low-latency • Zero-deps • Static HTML • PUBLIC MIT</li>
-<li style="display:flex;gap:8px;font-size:12.5px;color:#475569"><span style="color:#16a34a">•</span> Direct principal: MANJUNATH Nadkalpur — 20y+ market systems, all repos PUBLIC</li>
-</ul>
-<div style="margin-top:16px;padding-top:14px;border-top:1px solid #e2e8f0">
-<div class="small">Focus</div>
-<div style="font-size:13px;font-weight:600;color:#0f172a;margin-top:4px">C++17, C++20 and beyond — High-Performance Systems for HFT & Insurance — All PUBLIC</div>
-</div>
-</div>
-</div>
-</section>
 
-<footer style="border-top:1px solid #f1f5f9;padding:20px 0;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px;color:#94a3b8">
-<div style="display:flex;gap:10px;flex-wrap:wrap"><span style="font-weight:500;color:#475569">© Data Fidelis Services</span><span>•</span><span>Hong Kong (SAR)</span><span>•</span><a href="mailto:billing@datafidelis.com" style="color:inherit">billing@datafidelis.com</a><span>•</span><span>+852 5783 0107</span><span>•</span><a href="/.well-known/security.txt" style="color:inherit">security.txt</a><span>•</span><span style="color:#16a34a;font-weight:600">3 PUBLIC REPOS</span></div>
-<span class="mono" style="border:1px solid #bbf7d0;background:#f0fdf4;color:#15803d;padding:4px 10px;border-radius:999px;display:inline-flex;align-items:center;gap:6px"><span style="width:6px;height:6px;background:#16a34a;border-radius:50%"></span>PUBLIC • HK • C++20/23 • MIT</span>
-</footer>
-<div style="height:24px"></div>
+<div class="footer2">
+  <div>© Data Fidelis Services • Hong Kong (SAR) • <a href="mailto:billing@datafidelis.com">billing@datafidelis.com</a> • +852 5783 0107 • <a href="/security.txt">security.txt</a> • <span style="color:var(--accent);font-weight:800;">4 PUBLIC REPOS</span></div>
+  <div class="pill">• PUBLIC • HK • C++20/23 • MIT</div>
 </div>
+
 </body>
 </html>
