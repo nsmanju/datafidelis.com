@@ -1,5 +1,5 @@
 Contact: mailto:billing@datafidelis.com
-Contact: https://wa.me/85257830107
 Expires: 2026-12-31T23:59:59.000Z
+Acknowledgments: https://datafidelis.com
 Preferred-Languages: en
-Canonical: https://www.datafidelis.com/.well-known/security.txt
+Canonical: https://datafidelis.com/.well-known/security.txt
